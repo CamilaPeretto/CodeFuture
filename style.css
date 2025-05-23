@@ -8,9 +8,7 @@
 
 body {
   font-family: 'Share Tech Mono', monospace;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #000;
+  background: #000;
   color: #fafafa;
   min-height: 100vh;
   line-height: 1.6;
@@ -18,13 +16,12 @@ body {
 
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-template-areas:
-  "hero hero"
-  "sobre sobre"
-  "programacao programacao"
-  "palestrantes palestrantes"
-  "contato contato";
+  "hero"
+  "sobre"
+  "programacao"
+  "palestrantes"
+  "contato";
 }
 
 header {
@@ -38,8 +35,7 @@ header {
 
 .logo {
   font-size: 2.5vw;
-  color: #fafafa;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .logo span {
@@ -64,12 +60,11 @@ nav a:focus {
 .hero {
   grid-area: hero;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: flex-end;
   padding: 5vw;
-  background-color: #000;
   border-bottom: 0.3vh solid #7C3AED;
-  color: #fafafa;
+  gap: 3vw;
 }
 
 .hero-texto {
@@ -78,66 +73,58 @@ nav a:focus {
 
 .hero-texto h2 {
   font-size: 4vw;
-  margin-bottom: 2vh;
-  font-weight: 700;
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 .hero-texto p {
   font-size: 1.3vw;
-  line-height: 1.8;
-  margin-bottom: 2.5vh;
+  margin-bottom: 1.5rem;
   text-align: justify;
 }
 
 .botao {
   display: inline-block;
-  padding: 1vw 2vw;
-  background-color: #7C3AED;
+  padding: 0.8em 1.5em;
+  background: #7C3AED;
   color: #fff;
-  border-radius: 0.5vw;
+  border-radius: 0.5em;
   font-weight: 700;
   font-size: 1.2vw;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: 0.3s;
   cursor: pointer;
   border: none;
-  text-align: center;
 }
 
 .botao:hover,
 .botao:focus {
-  background-color: #000;
+  background: #000;
   color: #7C3AED;
-  outline: none;
 }
 
 .hero-imagem {
   flex: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  overflow: hidden;
-  position: relative;
 }
 
 .hero-imagem img {
   width: 80%;
-  height: auto;
   object-fit: contain;
-  object-position: right center;
   user-select: none;
 }
 
 .sobre-container {
   grid-area: sobre;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 5vw;
   gap: 4vw;
   border-bottom: 0.3vh solid #7C3AED;
-  flex-wrap: wrap;
-  color: #fafafa;
 }
 
 .sobre-texto {
@@ -148,14 +135,12 @@ nav a:focus {
 .sobre-texto h2 {
   font-size: 3vw;
   color: #7C3AED;
-  margin-bottom: 4vh;
-  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .sobre-texto p {
   font-size: 1.3vw;
-  line-height: 1.6;
-  margin-bottom: 3vw;
+  margin-bottom: 1.5rem;
   text-align: justify;
 }
 
@@ -163,54 +148,46 @@ nav a:focus {
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  min-width: 280px;
 }
 
 .sobre-imagem img {
   width: 80%;
   border-radius: 1.2vw;
   box-shadow: 0 0 3vw rgba(124, 58, 237, 0.3);
-  user-select: none;
 }
 
 .programacao {
   grid-area: programacao;
   padding: 6vh 10vw;
-  color: #fafafa;
   text-align: center;
   border-bottom: 0.3vh solid #7C3AED;
 }
 
 .programacao h2 {
   font-size: 3.6vw;
-  margin-bottom: 4vh;
-  font-weight: 700;
+  margin-bottom: 2rem;
 }
 
 .programa-container {
   display: flex;
   justify-content: center;
-  gap: 6vw;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
 .programa-item {
-  background-color: #1a1a1a;
-  padding: 3vh 2vw;
+  background: #1a1a1a;
+  padding: 2rem;
   border-radius: 1.2vw;
   width: 35vw;
-  max-width: 600px;
   box-shadow: 0 0 1vw #7C3AED55;
   text-align: left;
-  color: #fafafa;
 }
 
 .programa-item h3 {
   color: #7C3AED;
-  margin-bottom: 2vh;
+  margin-bottom: 1rem;
   font-size: 2.2vw;
-  font-weight: 700;
 }
 
 .programa-item p {
@@ -219,14 +196,12 @@ nav a:focus {
 }
 
 .localizacao {
-  margin-top: 6vh;
+  margin-top: 3rem;
 }
 
 .localizacao h3 {
   font-size: 2.8vw;
-  margin-bottom: 2vh;
-  font-weight: 700;
-  color: #fafafa;
+  margin-bottom: 1rem;
 }
 
 .mapa iframe {
@@ -240,55 +215,43 @@ nav a:focus {
 #palestrantes {
   grid-area: palestrantes;
   padding: 6vh 4vw;
-  color: #fafafa;
   border-bottom: 0.3vh solid #7C3AED;
 }
 
 #palestrantes h2 {
   font-size: 3.2vw;
-  margin-bottom: 4vh;
-  font-weight: 700;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
 .palestrantes-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5vw;
+  gap: 1.5rem;
 }
 
 .card {
-  background-color: #1a1a1a;
-  padding: 2vh 1.5vw;
+  background: #1a1a1a;
+  padding: 2rem;
   border-radius: 1.2vw;
   text-align: center;
-  flex: 1 1 22%;
-  min-width: 20vw;
-  max-width: 280px;
   box-shadow: 0 0.4vh 1.2vh rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #fafafa;
+  transition: 0.3s;
 }
 
-.card:hover,
-.card:focus-within {
-  transform: translateY(-0.5vh);
+.card:hover{
+  transform: translateY(-0.5px);
   box-shadow: 0 1vh 2vh rgba(124, 58, 237, 0.6);
-  outline: none;
 }
 
 .card img {
   width: 100%;
-  height: auto;
   border-radius: 1vw;
   margin-bottom: 1vh;
-  user-select: none;
 }
 
 .card h3 {
   font-size: 1.8vw;
-  margin-bottom: 0.5vh;
-  font-weight: 700;
 }
 
 .card p {
@@ -299,8 +262,6 @@ nav a:focus {
 .contato {
   grid-area: contato;
   padding: 6vh 4vw;
-  color: #fafafa;
-  background-color: #000;
 }
 
 .contato-container {
@@ -311,59 +272,76 @@ nav a:focus {
 .formulario {
   display: flex;
   flex-direction: column;
-  gap: 1.5vh;
+  gap: 1rem;
 }
 
 .formulario label {
   font-size: 1.3vw;
-  margin-bottom: 0.5vh;
   font-weight: 600;
 }
 
 .formulario input,
 .formulario textarea {
-  padding: 1vh 1vw;
+  padding: 1rem;
   font-size: 1.2vw;
   border-radius: 0.5vw;
   border: 0.15vw solid #7C3AED;
-  background-color: #1a1a1a;
+  background: #1a1a1a;
   color: #fafafa;
-  resize: vertical;
-  transition: border-color 0.3s ease;
 }
 
 .formulario input:focus,
 .formulario textarea:focus {
   outline: none;
   border-color: #b085ff;
-  background-color: #2a2a2a;
+  background: #2a2a2a;
 }
 
 .formulario button {
-  margin-top: 2vh;
-  padding: 1.5vh 0;
+  margin-top: 1rem;
+  padding: 1rem;
   font-size: 1.3vw;
-  font-weight: 700;
+  font-weight: bold;
   color: #000;
-  background-color: #7C3AED;
+  background: #7C3AED;
   border: none;
   border-radius: 0.5vw;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: 0.3s;
 }
 
 .formulario button:hover,
 .formulario button:focus {
-  background-color: #5a27b7;
-  outline: none;
+  background: #5a27b7;
 }
 
-footer.footer {
+.btn-mais-info {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #7C3AED;
+  color: #fff;
+  font-size: 30px;
+  line-height: 60px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.btn-mais-info:hover {
   background-color: #000;
+  transform: scale(1.1);
+}
+
+
+footer.footer {
   padding: 2vh 4vw;
-  color: #fafafa;
   text-align: center;
   font-size: 1vw;
   border-top: 0.2vh solid #7C3AED;
-  text-decoration: none;
 }

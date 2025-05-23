@@ -1,0 +1,187 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Share Tech Mono', monospace;
+    background: #000;
+    color: #fafafa;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+  
+  main {
+    display: grid;
+    grid-template-areas:
+    "faq"
+    "patrocinadores"
+    "galeria";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 4vw;
+    background-color: #000;
+    border-bottom: 0.3vh solid #7C3AED;
+  }
+  
+  .logo {
+    font-size: 2.5vw;
+    font-weight: bold;
+  }
+  
+  .logo span {
+    color: #7C3AED;
+  }
+  
+  nav a {
+    margin-left: 2vw;
+    text-decoration: none;
+    color: #fafafa;
+    font-weight: 600;
+    font-size: 1.2vw;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover,
+  nav a:focus {
+    color: #7C3AED;
+    outline: none;
+  }
+  
+  .faq {
+    grid-area: faq;
+    width: 80%;
+    margin: 40px auto;
+    padding: 0 20px;
+
+  }
+  
+  .faq h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .faq-item {
+    border-bottom: 1px solid #7C3AED;
+    padding: 20px 0;
+  }
+  
+  .faq-item summary {
+    font-size: 1.2rem;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    padding-right: 20px;
+  }
+  
+  .faq-item summary::after {
+    content: "▼";
+    position: absolute;
+    right: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-item[open] summary::after {
+    transform: rotate(180deg);
+  }
+  
+  .faq-item p {
+    margin: 10px 0 0;
+    padding-left: 10px;
+    color: #999;
+    font-weight: bold;
+  }
+  
+  .patrocinadores {
+    text-align: center;
+    padding: 60px 20px;
+    border-top: 0.3vh solid #7C3AED;
+    border-bottom: 0.3vh solid #7C3AED;
+  }
+
+  .patrocinadores h2 {
+    font-size: 2rem;
+    color: #fafafa;
+    margin-bottom: 10px;
+  }
+  
+  .patrocinadores .subtitulo {
+    font-size: 1rem;
+    color: #fafafa;
+    margin-bottom: 100px;
+  }
+
+  .patrocinadores .logos {
+    grid-area: patrocinadores;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 40px;
+    justify-items: center;
+    padding: 20px 0;
+  }
+  
+  .patrocinadores .logos img {
+    max-width: 120px;
+    height: auto;
+    transition: 0.3s ease;
+    opacity: 0.8;
+  }
+  
+  .patrocinadores .logos img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  
+  .galeria {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  .galeria h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #fafafa;
+  }
+  
+  .grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .grid-galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0.9) grayscale(10%);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .grid-galeria img:hover {
+    transform: scale(1.05);
+    filter: brightness(1) grayscale(0%);
+  }
+  
+
+  footer.footer {
+    padding: 2vh 4vw;
+    text-align: center;
+    font-size: 1vw;
+    border-top: 0.2vh solid #7C3AED;
+  }
+  
+  

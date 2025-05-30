@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="CodeFuture 2025 - Evento de tecnologia e inovação com palestras, painéis e networking em São Paulo.">
   <meta name="author" content="CodeFuture 2025">
-  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
   <title>CodeFuture 2025 - Evento de Tecnologia e Inovação</title>
-  <link rel="stylesheet" href="./estilo/style.css" />
+  <link rel="stylesheet" href="./src/css/style.css" />
 </head>
 <body>
   <header>
@@ -32,7 +35,7 @@
         <a href="https://wa.me/19989146352" class="botao">Garanta o seu ingresso</a>
       </div>
       <div class="hero-imagem">
-        <img src="./img/punkwoman.png" alt="Ilustração de mulher robótica futurista" />
+        <img src="./src/img/punkwoman.png" alt="Ilustração de mulher robótica futurista" />
       </div>
     </section>
 
@@ -48,7 +51,7 @@
         </p>
       </div>
       <div class="sobre-imagem">
-        <img src="./img/eventotech.jpeg" alt="Público participando de uma palestra de tecnologia" />
+        <img src="./src/img/eventotech.jpeg" alt="Público participando de uma palestra de tecnologia" />
       </div>
     </section>
 
@@ -93,25 +96,25 @@
       <h2>Palestrantes</h2>
       <div class="palestrantes-container">
         <div class="card">
-          <img src="./img/P_UX.png" alt="Lucas Ventura - Especialista em UX" />
+          <img src="./src/img/P_UX.png" alt="Lucas Ventura - Especialista em UX" />
           <h3>Lucas Ventura</h3>
           <p>Especialista em UX e acessibilidade digital</p>
         </div>
 
         <div class="card">
-          <img src="./img/P_QA.png" alt="João Martins - Especialista em QA" />
+          <img src="./src/img/P_QA.png" alt="João Martins - Especialista em QA" />
           <h3>João Martins</h3>
           <p>Analista de Qualidade com 10 anos de mercado</p>
         </div>
 
         <div class="card">
-          <img src="./img/P_RPA.png" alt="Ana Luiza - Engenheira de RPA" />
+          <img src="./src/img/P_RPA.png" alt="Ana Luiza - Engenheira de RPA" />
           <h3>Ana Luiza</h3>
           <p>Engenheira de Automação e RPA em fintechs</p>
         </div>
 
         <div class="card">
-          <img src="./img/P_DADOS.png" alt="Keiko Yamamoto - Cientista de Dados" />
+          <img src="./src/img/P_DADOS.png" alt="Keiko Yamamoto - Cientista de Dados" />
           <h3>Keiko Yamamoto</h3>
           <p>Cientista de Dados com foco em IA e Big Data</p>
         </div>
@@ -122,18 +125,22 @@
     <section id="contato" class="contato">
       <h2>Fale Conosco</h2>
       <div class="contato-container">
-        <form class="formulario">
+        <form id="formulario" class="formulario" action="https://formsubmit.co/camilaperetto@gmail.com" method="POST">
           <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" required />
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
 
           <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required />
+
+          <label for="telefone">Telefone</label>
+          <input type="text" id="telefone" name="telefone" placeholder="(00) 00000-0000">
 
           <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+          <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" rows="5" required></textarea>
 
           <button type="submit">Enviar</button>
         </form>
+        <p id="mensagem-enviada" style="display: none; color: #7C3AED; font-weight: bold; margin-top: 10px;">Mensagem enviada com sucesso!</p>
       </div>
     </section>
 
@@ -150,5 +157,7 @@
         Centro de Convenções TechHall, São Paulo - SP | contato@techhall.com |(11) 91234-5678</p>
     </div>
   </footer>
+
+  <script src="./src/js/jquery.js"></script>
 </body>
 </html>

@@ -30,11 +30,11 @@ header {
   align-items: center;
   padding: 2vh 4vw;
   background-color: #000;
-  border-bottom: 0.3vh solid #7C3AED;
+  border-bottom: 2px solid #7C3AED;
 }
 
 .logo {
-  font-size: 2.5vw;
+  font-size: 32px;
   font-weight: bold;
 }
 
@@ -43,11 +43,11 @@ header {
 }
 
 nav a {
-  margin-left: 2vw;
+  margin-left: 32px;
   text-decoration: none;
   color: #fafafa;
   font-weight: 600;
-  font-size: 1.2vw;
+  font-size: 16px;
   transition: color 0.3s ease;
 }
 
@@ -63,7 +63,7 @@ nav a:focus {
   flex-wrap: wrap;
   align-items: flex-end;
   padding: 5vw;
-  border-bottom: 0.3vh solid #7C3AED;
+  border-bottom: 2px solid #7C3AED;
   gap: 3vw;
 }
 
@@ -72,25 +72,25 @@ nav a:focus {
 }
 
 .hero-texto h2 {
-  font-size: 4vw;
-  margin-bottom: 1rem;
+  font-size: 48px;
+  margin-bottom: 16px;
   font-weight: bold;
 }
 
 .hero-texto p {
-  font-size: 1.3vw;
-  margin-bottom: 1.5rem;
+  font-size: 18px;
+  margin-bottom: 24px;
   text-align: justify;
 }
 
 .botao {
   display: inline-block;
-  padding: 0.8em 1.5em;
+  padding: 13px 24px;
   background: #7C3AED;
   color: #fff;
-  border-radius: 0.5em;
+  border-radius: 8px;
   font-weight: 700;
-  font-size: 1.2vw;
+  font-size: 16px;
   text-decoration: none;
   transition: 0.3s;
   cursor: pointer;
@@ -124,7 +124,7 @@ nav a:focus {
   align-items: center;
   padding: 5vw;
   gap: 4vw;
-  border-bottom: 0.3vh solid #7C3AED;
+  border-bottom: 2px solid #7C3AED;
 }
 
 .sobre-texto {
@@ -133,14 +133,14 @@ nav a:focus {
 }
 
 .sobre-texto h2 {
-  font-size: 3vw;
+  font-size: 35px;
   color: #7C3AED;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 .sobre-texto p {
-  font-size: 1.3vw;
-  margin-bottom: 1.5rem;
+  font-size: 18px;
+  margin-bottom: 24px;
   text-align: justify;
 }
 
@@ -152,110 +152,110 @@ nav a:focus {
 
 .sobre-imagem img {
   width: 80%;
-  border-radius: 1.2vw;
-  box-shadow: 0 0 3vw rgba(124, 58, 237, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 0 48px rgba(124, 58, 237, 0.3);
 }
 
 .programacao {
   grid-area: programacao;
   padding: 6vh 10vw;
   text-align: center;
-  border-bottom: 0.3vh solid #7C3AED;
+  border-bottom: 2px solid #7C3AED;
 }
 
 .programacao h2 {
-  font-size: 3.6vw;
-  margin-bottom: 2rem;
+  font-size: 38px;
+  margin-bottom: 32px;
 }
 
 .programa-container {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 32px;
   flex-wrap: wrap;
 }
 
 .programa-item {
   background: #1a1a1a;
-  padding: 2rem;
-  border-radius: 1.2vw;
+  padding: 32px;
+  border-radius: 16px;
   width: 35vw;
-  box-shadow: 0 0 1vw #7C3AED55;
+  box-shadow: 0 0 16px #7C3AED55;
   text-align: left;
 }
 
 .programa-item h3 {
   color: #7C3AED;
-  margin-bottom: 1rem;
-  font-size: 2.2vw;
+  margin-bottom: 16px;
+  font-size: 29px;
 }
 
 .programa-item p {
-  margin-bottom: 1vh;
-  font-size: 1.6vw;
+  margin-bottom: 16px;
+  font-size: 16px;
 }
 
 .localizacao {
-  margin-top: 3rem;
+  margin-top: 48px;
 }
 
 .localizacao h3 {
-  font-size: 2.8vw;
-  margin-bottom: 1rem;
+  font-size: 29px;
+  margin-bottom: 16px;
 }
 
 .mapa iframe {
   width: 100%;
   height: 30vh;
-  border-radius: 1.2vw;
+  border-radius: 16px;
   border: none;
-  box-shadow: 0 0 2vw rgba(124, 58, 237, 0.5);
+  box-shadow: 0 0 32px rgba(124, 58, 237, 0.5);
 }
 
 #palestrantes {
   grid-area: palestrantes;
   padding: 6vh 4vw;
-  border-bottom: 0.3vh solid #7C3AED;
+  border-bottom: 2px solid #7C3AED;
 }
 
 #palestrantes h2 {
-  font-size: 3.2vw;
-  margin-bottom: 2rem;
+  font-size: 35px;
+  margin-bottom: 32px;
   text-align: center;
 }
 
 .palestrantes-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 .card {
   background: #1a1a1a;
-  padding: 2rem;
-  border-radius: 1.2vw;
+  padding: 32px;
+  border-radius: 16px;
   text-align: center;
-  box-shadow: 0 0.4vh 1.2vh rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
   transition: 0.3s;
 }
 
 .card:hover{
-  transform: translateY(-0.5px);
-  box-shadow: 0 1vh 2vh rgba(124, 58, 237, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(124, 58, 237, 0.6);
 }
 
 .card img {
   width: 100%;
-  border-radius: 1vw;
-  margin-bottom: 1vh;
+  border-radius: 13px;
+  margin-bottom: 8px;
 }
 
 .card h3 {
-  font-size: 1.8vw;
+  font-size: 22px;
 }
 
 .card p {
-  font-size: 1.2vw;
+  font-size: 16px;
   color: #ccc;
 }
 
@@ -272,20 +272,20 @@ nav a:focus {
 .formulario {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
 }
 
 .formulario label {
-  font-size: 1.3vw;
+  font-size: 18px;
   font-weight: 600;
 }
 
 .formulario input,
 .formulario textarea {
-  padding: 1rem;
-  font-size: 1.2vw;
-  border-radius: 0.5vw;
-  border: 0.15vw solid #7C3AED;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #7C3AED;
   background: #1a1a1a;
   color: #fafafa;
 }
@@ -298,14 +298,14 @@ nav a:focus {
 }
 
 .formulario button {
-  margin-top: 1rem;
-  padding: 1rem;
-  font-size: 1.3vw;
+  margin-top: 16px;
+  padding: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: #000;
   background: #7C3AED;
   border: none;
-  border-radius: 0.5vw;
+  border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -342,6 +342,6 @@ nav a:focus {
 footer.footer {
   padding: 2vh 4vw;
   text-align: center;
-  font-size: 1vw;
-  border-top: 0.2vh solid #7C3AED;
+  font-size: 14px;
+  border-top: 2px solid #7C3AED;
 }

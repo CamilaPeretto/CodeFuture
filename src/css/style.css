@@ -404,9 +404,30 @@ footer.footer {
     max-width: 90%;
   }
 
+  .palestrantes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    width: 95%;
+  }
+
+  .palestrantes-container .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .formulario input,
   .formulario textarea {
-    width: 100%;
+    width: 80%;
     font-size: 18px;
     
   }

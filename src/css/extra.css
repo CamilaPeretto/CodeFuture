@@ -183,3 +183,78 @@ body {
     font-size: 10px;
     border-top: 1.6px solid #7C3AED;
   } 
+
+  @media (max-width: 600px) {
+    header {
+      padding: 16px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav {
+      display: none;
+    }
+  
+    .faq {
+      width: 90%;
+      padding: 0 10px;
+
+    }
+  
+    .faq h2 {
+      font-size: 26px;
+    }
+  
+    .faq-item summary {
+      font-size: 16px;
+    }
+  
+    .faq-item p {
+      font-size: 14px;
+    }
+  
+    .patrocinadores {
+      padding: 40px 10px;
+      
+    }
+  
+    .patrocinadores h2 {
+      font-size: 26px;
+    }
+  
+    .patrocinadores .subtitulo {
+      font-size: 14px;
+      margin-bottom: 60px;
+    }
+  
+    .patrocinadores .logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    }
+
+    .patrocinadores .logos img {
+      max-width: 50%;
+    }
+  
+    .galeria {
+      width: 80%;
+      padding: 10px;
+    }
+  
+    .galeria h2 {
+      font-size: 26px;
+    }
+  
+    .grid-galeria {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  
+    footer.footer {
+      font-size: 8px;
+      padding: 12px 20px;
+    }
+  }
+  

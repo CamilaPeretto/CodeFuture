@@ -360,12 +360,13 @@ footer.footer {
   }
 
   .hero-texto {
-    max-width: 100%;
+    max-width: 85%;
     z-index: 2;
+    position: absolute;
   }
 
   .hero-imagem {
-    position: absolute;
+    
     width: 100%;
     filter: brightness(0.5);
   }
@@ -400,8 +401,7 @@ footer.footer {
   }
 
   .programa-item {
-    width: 100%;
-    max-width: 90%;
+    width: 80%;
   }
 
   .palestrantes-container {

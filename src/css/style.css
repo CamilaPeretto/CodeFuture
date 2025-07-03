@@ -57,6 +57,21 @@ nav a:focus {
   outline: none;
 }
 
+.botao-ingresso {
+  background: transparent;
+  border: 2px solid #7C3AED;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.botao-ingresso:hover {
+  background: #7C3AED;
+  color: #fff;
+}
+
 .hero {
   grid-area: hero;
   display: flex;
@@ -347,7 +362,6 @@ footer.footer {
 }
 
 
-
 @media (max-width: 600px) {
   nav {
     display: none;
@@ -482,4 +496,66 @@ footer.footer {
   .contato-container {
     max-width: 80%;
   }
+}
+
+
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  height: 100vh;
+  color: #fafafa;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.login-container {
+  display: flex;
+  gap: 48px;
+  background: #1a1a1a;
+  padding: 48px;
+  border-radius: 16px;
+  box-shadow: 0 0 32px rgba(124, 58, 237, 0.4);
+}
+
+.login-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 300px;
+}
+
+.login-card h2 {
+  color: #7C3AED;
+  text-align: center;
+}
+
+.login-card input {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #7C3AED;
+  background: #000;
+  color: #fff;
+}
+
+.login-card button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #7C3AED;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-card button:hover {
+  background-color: #5a27b7;
+}
+
+.msg {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
 }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | CodeFuture</title>
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body class="login-body">
+  <main class="login-container">
+    <!-- Login -->
+    <div class="login-card">
+      <h2>Entrar</h2>
+      <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Email" required />
+        <input type="password" id="loginSenha" placeholder="Senha" required />
+        <button type="submit">Entrar</button>
+        <p class="msg" id="loginMsg"></p>
+      </form>
+    </div>
+
+    <!-- Cadastro -->
+    <div class="login-card">
+      <h2>Cadastrar</h2>
+      <form id="cadastroForm">
+        <input type="text" id="cadastroNome" placeholder="Nome" required />
+        <input type="email" id="cadastroEmail" placeholder="Email" required />
+        <input type="password" id="cadastroSenha" placeholder="Senha" required />
+        <input type="password" id="cadastroConfirmar" placeholder="Confirmar senha" required />
+        <button type="submit">Cadastrar</button>
+        <p class="msg" id="cadastroMsg"></p>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    // LOGIN
+    $('#loginForm').on('submit', function(e) {
+      e.preventDefault();
+      const email = $('#loginEmail').val();
+      const senha = $('#loginSenha').val();
+
+      const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+      const usuario = usuarios.find(u => u.email === email && u.senha === senha);
+
+      if (usuario) {
+        localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
+        window.location.href = 'area-restrita.html';
+      } else {
+        $('#loginMsg').text('Usuário ou senha inválidos').css('color', 'red');
+      }
+    });
+
+    // CADASTRO
+    $('#cadastroForm').on('submit', function(e) {
+      e.preventDefault();
+      const nome = $('#cadastroNome').val();
+      const email = $('#cadastroEmail').val();
+      const senha = $('#cadastroSenha').val();
+      const confirmar = $('#cadastroConfirmar').val();
+
+      if (senha !== confirmar) {
+        $('#cadastroMsg').text('Senhas não coincidem').css('color', 'red');
+        return;
+      }
+
+      const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+      if (usuarios.find(u => u.email === email)) {
+        $('#cadastroMsg').text('Email já cadastrado').css('color', 'red');
+        return;
+      }
+
+      usuarios.push({ nome, email, senha });
+      localStorage.setItem('usuarios', JSON.stringify(usuarios));
+      $('#cadastroMsg').text('Cadastro realizado com sucesso!').css('color', '#7C3AED');
+    });
+  </script>
+</body>
+</html>

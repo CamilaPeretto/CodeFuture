@@ -5,23 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login | CodeFuture</title>
   <link rel="stylesheet" href="./src/css/style.css" />
+  <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </head>
 <body class="login-body">
+
+  <header>
+    <a href="index.html" style="text-decoration: none; color: inherit;">
+      <h1 class="logo">Code<span>Future</span></h1>
+    </a>
+  </header>
+
   <main class="login-container">
-    <!-- Login -->
-    <div class="login-card">
+    <!-- LOGIN -->
+    <div class="login-card" id="cardLogin">
       <h2>Entrar</h2>
       <form id="loginForm">
         <input type="email" id="loginEmail" placeholder="Email" required />
         <input type="password" id="loginSenha" placeholder="Senha" required />
         <button type="submit">Entrar</button>
         <p class="msg" id="loginMsg"></p>
+        <p class="link">
+          Ainda não tem conta? <span class="trocar-para-cadastro">Cadastre-se</span>
+        </p>
       </form>
     </div>
-
-    <!-- Cadastro -->
-    <div class="login-card">
+  
+    <!-- CADASTRO (ESCONDIDO INICIALMENTE) -->
+    <div class="login-card hidden" id="cardCadastro">
       <h2>Cadastrar</h2>
       <form id="cadastroForm">
         <input type="text" id="cadastroNome" placeholder="Nome" required />
@@ -30,51 +43,21 @@
         <input type="password" id="cadastroConfirmar" placeholder="Confirmar senha" required />
         <button type="submit">Cadastrar</button>
         <p class="msg" id="cadastroMsg"></p>
+        <p class="link">
+          Já tem conta? <span class="trocar-para-login">Voltar</span>
+        </p>
       </form>
     </div>
   </main>
+  
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2025 CodeFuture. Todos os direitos reservados.</p>
+      <p>
+        Centro de Convenções TechHall, São Paulo - SP | contato@techhall.com |(11) 91234-5678</p>
+    </div>
+  </footer>
 
-  <script>
-    // LOGIN
-    $('#loginForm').on('submit', function(e) {
-      e.preventDefault();
-      const email = $('#loginEmail').val();
-      const senha = $('#loginSenha').val();
-
-      const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-      const usuario = usuarios.find(u => u.email === email && u.senha === senha);
-
-      if (usuario) {
-        localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
-        window.location.href = 'area-restrita.html';
-      } else {
-        $('#loginMsg').text('Usuário ou senha inválidos').css('color', 'red');
-      }
-    });
-
-    // CADASTRO
-    $('#cadastroForm').on('submit', function(e) {
-      e.preventDefault();
-      const nome = $('#cadastroNome').val();
-      const email = $('#cadastroEmail').val();
-      const senha = $('#cadastroSenha').val();
-      const confirmar = $('#cadastroConfirmar').val();
-
-      if (senha !== confirmar) {
-        $('#cadastroMsg').text('Senhas não coincidem').css('color', 'red');
-        return;
-      }
-
-      const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-      if (usuarios.find(u => u.email === email)) {
-        $('#cadastroMsg').text('Email já cadastrado').css('color', 'red');
-        return;
-      }
-
-      usuarios.push({ nome, email, senha });
-      localStorage.setItem('usuarios', JSON.stringify(usuarios));
-      $('#cadastroMsg').text('Cadastro realizado com sucesso!').css('color', '#7C3AED');
-    });
-  </script>
+  <script src="./src/js/login.js"></script>
 </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Área Restrita - CodeFuture</title>
+  <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.css" />
+  <link rel="stylesheet" href="./src/css/area-restrita.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+<body class="restrita-body">
+  <header class="restrita-header">
+    <h1>Bem-vindo(a), <span id="nomeUsuario">Usuário</span></h1>
+    <button id="logoutBtn">Sair</button>
+  </header>
+
+  <main class="restrita-container">
+    <h2>Seu Ingresso para o CodeFuture 2025</h2>
+    <div class="card-ingresso">
+      <p>Mostre este QR Code na entrada do evento:</p>
+      <div id="qrcode"></div>
+      <button id="gerarQrBtn">Gerar QR Code</button>
+    </div>
+  </main>
+
+  <footer class="restrita-footer">
+    <p>&copy; 2025 CodeFuture - Evento de Tecnologia e Inovação</p>
+  </footer>
+
+  <script src="./src/js/area-restrita.js"></script>
+</body>
+</html>

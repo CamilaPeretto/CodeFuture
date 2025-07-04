@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body.restrita-body {
+  font-family: 'Share Tech Mono', monospace;
+  background: #000;
+  color: #fafafa;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.restrita-header {
+  background-color: #1a1a1a;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #7C3AED;
+}
+
+.restrita-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.restrita-header button {
+  padding: 10px 20px;
+  background-color: #7C3AED;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.restrita-header button:hover {
+  background-color: #5a27b7;
+}
+
+.restrita-container {
+  flex: 1;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.card-ingresso {
+  background-color: #1a1a1a;
+  border: 2px solid #7C3AED;
+  padding: 40px;
+  border-radius: 16px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.card-ingresso p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#qrcode {
+  margin: 20px auto;
+  width: 150px;
+  height: 150px;
+}
+
+#gerarQrBtn {
+  padding: 10px 20px;
+  background-color: #7C3AED;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#gerarQrBtn:hover {
+  background-color: #5a27b7;
+}
+
+.restrita-footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #1a1a1a;
+  border-top: 2px solid #7C3AED;
+  font-size: 14px;
+}

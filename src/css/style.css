@@ -361,42 +361,70 @@ footer.footer {
   border-top: 2px solid #7C3AED;
 }
 
+@media (max-width: 768px) {
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-@media (max-width: 600px) {
-  nav {
+  nav .nav-item {
     display: none;
   }
 
+  #botaoIngresso {
+    display: inline-block;
+    margin: 0 10px;
+  }
   .hero {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
+    background-image: url('../img/punkwoman.png');
+    background-size: cover;
+    background-position: center;
   }
 
   .hero-texto {
-    max-width: 85%;
-    z-index: 2;
-    position: absolute;
+    max-width: 90%;
+    padding: 20px;
+    position: static;
+    z-index: auto;
+    background: none;
+    text-align: first;
   }
 
   .hero-imagem {
-    
-    width: 100%;
-    filter: brightness(0.5);
+    display:none
   }
 
-  .hero-imagem img {
-    width: 90%;
+  .hero-texto h2 {
+    font-size: 26px;
+  }
+
+  .hero-texto p {
+    font-size: 16px;
+    box-shadow: #000 16px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
   .sobre-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 5vw;
+    gap: 24px;
+  }
+
+  .sobre-texto h2 {
+    font-size: 28px;
   }
 
   .sobre-texto {
-    max-width: 100%;
+    max-width: 95%;
+    font-size: 16px;
   }
 
   .sobre-imagem {
@@ -407,6 +435,7 @@ footer.footer {
 
   .sobre-imagem img {
     width: 90%;
+    border-radius: 12px;
   }
 
   .programa-container {
@@ -501,28 +530,49 @@ footer.footer {
 
 .login-body {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #000;
-  height: 100vh;
+  flex-direction: column;
+  min-height: 100vh;
+  
+  background: #1a1a1a;
+
+ 
+  border-radius: 16px;
+  box-shadow: 0 0 32px rgba(124, 58, 237, 0.4);
+
   color: #fafafa;
   font-family: 'Share Tech Mono', monospace;
 }
 
 .login-container {
   display: flex;
-  gap: 48px;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 96px;
   background: #1a1a1a;
   padding: 48px;
   border-radius: 16px;
   box-shadow: 0 0 32px rgba(124, 58, 237, 0.4);
 }
 
+.hidden {
+  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+}
+
 .login-card {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  width: 300px;
+
+  width: 500px;
+  transition: all 0.3s ease-in-out;
+  background: #1a1a1a;
+  border-radius: 16px;
+  gap: 50px;
+  padding: 48px;
+  border-radius: 16px;
+  box-shadow: 0 0 32px rgba(124, 58, 237, 0.4);
 }
 
 .login-card h2 {
@@ -537,6 +587,8 @@ footer.footer {
   border: 2px solid #7C3AED;
   background: #000;
   color: #fff;
+  margin: 5px 0;
+  width: 100%;
 }
 
 .login-card button {
@@ -548,6 +600,8 @@ footer.footer {
   color: #fff;
   cursor: pointer;
   font-weight: bold;
+  width: 100%;
+  margin: 5px 0 0 0;
 }
 
 .login-card button:hover {
@@ -558,4 +612,21 @@ footer.footer {
   text-align: center;
   font-size: 14px;
   font-weight: bold;
+}
+
+.trocar-para-cadastro,
+.trocar-para-login {
+  color: #fff;              /* branco inicialmente */
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.trocar-para-cadastro:hover,
+.trocar-para-login:hover {
+  color: #7C3AED;           /* roxo ao passar o mouse */
+}
+
+.link {
+ text-align: center;
 }
